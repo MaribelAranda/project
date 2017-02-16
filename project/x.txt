@@ -1,0 +1,7 @@
+./scripts/ – directory for all the python/R/perl scripts
+./bash/ – driver scripts that call all other scripts and execute pipelines
+./bash/runall.sh – the main driver script
+./bash/filter*sh – scripts that I use usually only once to filter input directories and create soft links
+./input/ – input directories
+./output/ – output directories
+./logs – stdout and stderr of runall.sh scripts
