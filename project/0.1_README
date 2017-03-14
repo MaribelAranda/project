@@ -1,0 +1,81 @@
+ 	
+Instructions to use the differents files in this repository.
+This repository was created in a project, where the main aim was to build a predictor of globular proteins and the distinguis the membrane and loop fragment of a transmembrane protein.
+
+
+In:
+
+0.2_FINAL_PREDICTOR_Random forest_tm_225G_model.py 	
+
+    - To run all this code, I use a specific fasta file (my whole original dataset) called 'beta_blobular_project', stored in the Desktop directory. This file specified the ID, sequence and features of all their sequences.
+	-This code creates a new dataset with approximate the same number of features belonging to a transmembrane and a globular protein (extraction of all transmembrane and 225 globular proteins from the original dataset). It creates and saves the model of a predictor through Random Forest as well as perform a prediction in the whole dataset. If a prediciton of another sequences is desired, it's necessary to upload a fasta file in line 212 of this code, just after the model is saved.
+
+
+
+1_Input_sklearn_prediction_3states_wholedataset.py
+
+	- To run all this code, I use a specific file (my whole original dataset) called 'beta_blobular_project', stored in the Desktop directory.
+	- Basically, with this file it's possible to build a bad predictor of the original dataset and perform a prediction at the same time.
+	- In this code is also described how to calculate the weights of each class.
+
+
+ 
+2_50%TM_50%G_2features.py 	
+
+	- To run all this code, I use a specific file (my whole original dataset) called 'beta_blobular_project', stored in the Desktop directory.
+	- In order to improve the performance of the last predictor, only 50% of transmembrane proteins and 50% of globular proteins were taken with this code from the origianl dataset. With this information, another predictor was built, which performed a great prediction distinguising transmembrane from globular proteins.
+
+
+
+
+3_TM_225G_dataset_3features.py 	
+
+	- To run all this code, I use a specific file (my whole original dataset) called 'beta_blobular_project', stored in the Desktop directory.
+	-This code creates a new dataset with approximate the same number of features belonging to a transmembrane and a globular protein (extraction of all transmembrane and 225 globular proteins from the original dataset). It creates and saves the model of a predictor through SVM (linear kernel).
+
+
+	
+4_Prediction_wholedataset.py
+
+    - To run all this code, I use a specific file (my whole original dataset) called 'beta_blobular_project', stored in the Desktop directory.	
+    - This code loads the previous saved model and performs a prediction in the whole dataset.
+
+
+
+
+5_psi-blast.sh
+
+ 	- Code to run a PSI-BLAST. The output is stored in two folders: psiblast_end & pssm
+
+
+
+6_Extract_pssm_TM_225G_model.py 
+
+    - To run all this code, I use a specific file (my whole original dataset) called 'beta_blobular_project', stored in the Desktop directory as well as the folder pssm_tm_g, in desktop as well (contains all transmembrane proteins pssm and 225 globular proteins pssm).
+    - This code extracts pssm information and builds and saves a model predictor through SVM (linear kernel).
+
+
+
+7_Prediction_wholedata_pssm_without_Xaa.py 
+
+    - To run all this code, I use a specific file called 'beta2'. It contains all the sequences without the amino acid X. It's stored in the Desktop directory. 
+    - This code loads the previous saved model and performs a prediction in the established dataset.
+
+
+
+
+
+
+8_Random_forest_pssm_model.py 	
+
+    - To run all this code, I use a specific file (my whole original dataset) called 'beta_blobular_project', stored in the Desktop directory as well as the folder pssm_tm_g, in desktop as well (contains all transmembrane proteins pssm and 225 globular proteins pssm).
+    - This code extracts pssm information and builds and saves a model predictor through Random Forest. It is possible to use the code in 7, to perform the prediction.
+
+
+
+9_Decision_tree_TM_225G_model.py
+
+    - To run all this code, I use a specific file (my whole original dataset) called 'beta_blobular_project', stored in the Desktop directory.
+	-This code creates a new dataset with approximate the same number of features belonging to a transmembrane and a globular protein (extraction of all transmembrane and 225 globular proteins from the original dataset). It creates and saves the model of a predictor through Decision tree. To perform a prediction is  possible to use the code in file number 4.
+
+
