@@ -2,6 +2,8 @@
 
 
 
+Run_PLINK = F
+Run_PLOT = F
 # Compile Sample information
 source("../code/compileSampleInfo/compileSampleInfo.R")
 
@@ -11,8 +13,6 @@ source("../code/compileSampleInfo/compileSampleInfo.R")
 # Visulize quality of the very basics
 #source("../code/gwas_pipeline/GP_QC_Basic.R")
 
-Run_PLINK = F
-Run_PLOT = F
 
 # Basic Marker QC
 source("../code/gwas_pipeline/GP_QC_Basic_Marker_QC.R")
@@ -31,5 +31,5 @@ source("../code/gwas_pipeline/GP_QC_Markers.R")
 source("../code/gwas_pipeline/GP_PostQC_Before_GWAS.R")
 
 # GWAS
-source("../code/gwas_pipeline/GP_Results.R")
+#source("../code/gwas_pipeline/GP_Results.R")
 
